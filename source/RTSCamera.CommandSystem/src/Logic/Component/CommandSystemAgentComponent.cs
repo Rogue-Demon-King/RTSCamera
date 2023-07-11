@@ -32,9 +32,11 @@ namespace RTSCamera.CommandSystem.Logic.Component
                 var unit = agent;
                 if (!unit.IsActive())
                     return WorldPosition.Invalid;
+
                 var formation = unit.Formation;
-                if (formation == null)
+                if (formation == null || formation.TargetFormation == null)
                     return WorldPosition.Invalid;
+
                 var targetFormation = QueryDataStore.Get(formation.TargetFormation);
 
                 Vec2 offset;
