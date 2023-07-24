@@ -42,6 +42,7 @@ namespace RTSCamera.Patch
             {
                 if (!agent.IsHuman)
                     return true;
+
                 if (agent.Controller != Agent.ControllerType.AI)
                 {
                     if (oldController != Agent.ControllerType.AI || agent.HumanAIComponent == null)

@@ -205,9 +205,9 @@ namespace RTSCameraAgentComponent
 
         public override void OnAgentRemoved()
         {
-            base.OnAgentRemoved();
-
             ClearContourColor();
+
+            base.OnAgentRemoved();
         }
     }
 }

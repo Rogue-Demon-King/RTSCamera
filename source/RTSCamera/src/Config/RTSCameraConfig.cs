@@ -118,7 +118,7 @@ namespace RTSCamera.Config
 
         public bool OrderUIClickable = true;
 
-        public bool FixCompanionFormation = true;
+        public bool FixCompanionFormation = false;
 
         public static void OnMenuClosed()
         {
