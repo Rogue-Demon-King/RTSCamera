@@ -7,7 +7,7 @@
 
   <string id="str_rts_camera_option_class" text="{=RTSCamera_option_class}RTS Camera" />
 
-  <string id="str_rts_camera_watch_battle" text="{=RTSCamera_watch_battle}(RTS Camera)Watch the battle." />
+  <string id="str_rts_camera_watch_battle" text="{=RTSCamera_watch_battle}(RTS Camera) Watch the battle." />
   <string id="str_rts_camera_cannot_control_agent_in_watch_mode" text="{=RTSCamera_cannot_control_agent_in_watch_mode}Cannot control units in watch mode." />
   <string id="str_rts_camera_watch_mode_tool_tip" text="{=RTSCamera_watch_mode_tool_tip}You are injured. You may be able to commmand your troops but you cannot directly participate in the battle." />
 
@@ -17,7 +17,7 @@
   <string id="str_rts_camera_switch_free_camera_hint" text="{=RTSCamera_switch_free_camera_hint}Switch between free camera and player camera." />
   <string id="str_rts_camera_use_free_camera_by_default_hint" text="{=RTSCamera_use_free_camera_by_default_hint}Switch to free camera when entering battle." />
   <string id="str_rts_camera_raised_height_hint" text="{=RTSCamera_raised_height_hint}Camera raised height after switching to free camera." />
-  <string id="str_rts_camera_limit_camera_distance_hint" text="{=RTSCamera_limit_camera_distance_hint}Limit Camera Distance by tactics and scouting skill." />
+  <string id="str_rts_camera_limit_camera_distance_hint" text="{=RTSCamera_limit_camera_distance_hint}Enables an RPG-esque feature for the RTS Camera, where the maximum distance for the camera is limited by tactics and scouting skill. Giving orders in this mode also awards tactics and scouting XP." />
   <string id="str_rts_camera_toggle_pause_hint" text="{=RTSCamera_toggle_pause_hint}Pause or unpause the game." />
   <string id="str_rts_camera_slow_motion_hint" text="{=RTSCamera_slow_motion_hint}Whether to enable slow motion mode (to adjust time speed)." />
   <string id="str_rts_camera_slow_motion_factor_hint" text="{=RTSCamera_slow_motion_factor_hint}The factor of time speed." />
@@ -163,7 +163,7 @@
   <string id="str_rts_camera_control_troop_hint" text="{=RTSCamera_control_troop_hint}Press {KeyName} to control one of your teammates." />
   <string id="str_rts_camera_control_current_agent_hint" text="{=RTSCamera_control_current_agent_hint}Press {KeyName} to control the character" />
 
-  <string id="str_rts_camera_tactics_skill_effect_description" text="{=RTSCamera_tactics_skill_effect_description}RTS Camera Limit by Tactics: +{a0}m" />
+  <string id="str_rts_camera_tactics_skill_effect_description" text="{=RTSCamera_tactics_skill_effect_description}RTS Camera Limit by Tactics: +{a0} meters" />
   <string id="str_rts_camera_scouting_skill_effect_description" text="{=RTSCamera_scouting_skill_effect_description}RTS Camera Limit by Scouting: +{a0}%" />
 
   <string id="str_rts_camera_base_distance" text="{=RTSCamera_base_distance}Base Distance" />

@@ -52,7 +52,7 @@ namespace RTSCamera.Logic.SubLogic
 
         public void AfterAddTeam(Team team)
         {
-            team.PlayerOrderController.OnOrderIssued += OnOnOrderIssued;
+            team.PlayerOrderController.OnOrderIssued += OnOrderIssued;
         }
 
         private bool ShouldGainSkillXp()
@@ -61,7 +61,7 @@ namespace RTSCamera.Logic.SubLogic
                 _logic.Mission.Mode == MissionMode.Battle && !_logic.Mission.IsMissionEnding;
         }
 
-        private void OnOnOrderIssued(OrderType orderType, IEnumerable<Formation> appliedFormations, object[] delegateParams)
+        private void OnOrderIssued(OrderType orderType, IEnumerable<Formation> appliedFormations, object[] delegateParams)
         {
             if (Utility.IsTeamValid(_logic.Mission.PlayerTeam) && Campaign.Current != null &&
                 (MapEvent.PlayerMapEvent == null ||
@@ -76,6 +76,7 @@ namespace RTSCamera.Logic.SubLogic
         {
             if (!ShouldGainSkillXp())
                 return;
+
             var duration = _logic.Mission.CurrentTime - _beginTime;
             _beginTime = _logic.Mission.CurrentTime;
             GiveXpForScouting(duration);
