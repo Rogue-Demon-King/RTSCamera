@@ -273,7 +273,7 @@ namespace RTSCamera.Config
                     GameTexts.FindText("str_rts_camera_slow_motion_factor"),
                     GameTexts.FindText("str_rts_camera_slow_motion_factor_hint"),
                     () => RTSCameraConfig.Get().SlowMotionFactor,
-                    f => rtsCameraLogic.MissionSpeedLogic.SetSlowMotionFactor(f), 0, 5, false, true));
+                    f => rtsCameraLogic.MissionSpeedLogic.SetSlowMotionFactor(f), 0, 3, false, true));
                 miscellaneousOptionCategory.AddOption(new BoolOptionViewModel(
                     GameTexts.FindText("str_rts_camera_display_mod_message"),
                     GameTexts.FindText("str_rts_camera_display_message_hint"),
@@ -293,13 +293,8 @@ namespace RTSCamera.Config
                     GameTexts.FindText("str_rts_camera_order_ui_clickable_hint"),
                     () => RTSCameraConfig.Get().OrderUIClickable,
                     b => RTSCameraConfig.Get().OrderUIClickable = UIConfig.DoNotUseGeneratedPrefabs = b));
-                miscellaneousOptionCategory.AddOption(new BoolOptionViewModel(
-                    GameTexts.FindText("str_rts_camera_fix_companion_formation"),
-                    GameTexts.FindText("str_rts_camera_fix_companion_formation_hint"),
-                    () => RTSCameraConfig.Get().FixCompanionFormation,
-                    b => RTSCameraConfig.Get().FixCompanionFormation = b));
-                optionClass.AddOptionCategory(1, miscellaneousOptionCategory);
 
+                optionClass.AddOptionCategory(1, miscellaneousOptionCategory);
                 if (NativeConfig.CheatMode)
                 {
                     var cheatOptionCategory = new OptionCategory("Cheat",

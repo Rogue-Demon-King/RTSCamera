@@ -19,7 +19,7 @@
   <string id="str_rts_camera_raised_height_hint" text="{=RTSCamera_raised_height_hint}Camera raised height after switching to free camera." />
   <string id="str_rts_camera_limit_camera_distance_hint" text="{=RTSCamera_limit_camera_distance_hint}Enables an RPG-esque feature for the RTS Camera, where the maximum distance for the camera is limited by tactics and scouting skill. Giving orders in this mode also awards tactics and scouting XP." />
   <string id="str_rts_camera_toggle_pause_hint" text="{=RTSCamera_toggle_pause_hint}Pause or unpause the game." />
-  <string id="str_rts_camera_slow_motion_hint" text="{=RTSCamera_slow_motion_hint}Whether to enable slow motion mode (to adjust time speed)." />
+  <string id="str_rts_camera_slow_motion_hint" text="{=RTSCamera_slow_motion_hint}When enabled, modifies the game speed by the factor you have set. This allows for either slowing down or even speeding up (above 1.0) the game speed." />
   <string id="str_rts_camera_slow_motion_factor_hint" text="{=RTSCamera_slow_motion_factor_hint}The factor of time speed." />
   <string id="str_rts_camera_player_controller_in_free_camera_hint" text="{=RTSCamera_player_controller_in_free_camera_hint}Player control mode in Free Camera. If set to none, player character will not be controlled. If set to AI, AI will control player character. If set to Player, you can still directly control your character." />
   <string id="str_rts_camera_player_formation_hint" text="{=RTSCamera_player_formation_hint}Assign player to the selected formation." />
@@ -37,7 +37,6 @@
   <string id="str_rts_camera_display_message_hint" text="{=RTSCamera_display_message_hint}Whether to display message of this mod." />
   <string id="str_rts_camera_toggle_ui_hint" text="{=RTSCamera_toggle_ui_hint}Toggle HUD of the game, for making video." />
   <string id="str_rts_camera_order_ui_clickable_hint" text="{=RTSCamera_order_ui_clickable_hint}Make order UI clickable. Exit to main menu to take effect." />
-  <string id="str_rts_camera_fix_companion_formation_hint" text="{=RTSCamera_fix_companion_formation_hint}Fix the issue that companions are always assigned to infantry formation." />
   <string id="str_rts_camera_all_invulnerable_hint" text="{=RTSCamera_disable_death_hint}All units will not die, for making video." />
   <string id="str_rts_camera_switch_team_hint" text="{=RTSCamera_switch_team_hint}Swap player's team, for making video." />
 
@@ -89,8 +88,8 @@
 
   <string id="str_rts_camera_miscellaneous_options" text="{=RTSCamera_miscellaneous_options}Miscellaneous Options" />
   <string id="str_rts_camera_toggle_pause" text="{=RTSCamera_togglepause}Toggle Pause" />
-  <string id="str_rts_camera_slow_motion_mode" text="{=RTSCamera_slowmotionmode}Slow Motion Mode" />
-  <string id="str_rts_camera_slow_motion_factor" text="{=RTSCamera_slowmotionfactor}Slow Motion Factor" />
+  <string id="str_rts_camera_slow_motion_mode" text="{=RTSCamera_slowmotionmode}'Slow' Motion Mode" />
+  <string id="str_rts_camera_slow_motion_factor" text="{=RTSCamera_slowmotionfactor}'Slow' Motion Factor" />
 
   <string id="str_rts_camera_unbalanced_options_description" text="{=RTSCamera_unbalancedoptionsdescription}Cheat Options" />
   <string id="str_rts_camera_all_invulnerable" text="{=RTSCamera_disabledeath}All Invulnerable" />
@@ -112,7 +111,6 @@
   <string id="str_rts_camera_display_mod_message" text="{=RTSCamera_displaymodmessage}Display Message" />
   <string id="str_rts_camera_toggle_ui" text="{=RTSCamera_toggleui}Toggle HUD" />
   <string id="str_rts_camera_order_ui_clickable" text="{=RTSCamera_order_ui_clickable}Order UI Clickable" />
-  <string id="str_rts_camera_fix_companion_formation" text="{=RTSCamera_fix_companion_formation}Fix Companion Formation" />
 
   <string id="str_key_category_name.RTSCameraHotKey" text="{=RTSCamera_hotkeycategory}RTSCamera Hot Key" />
   <string id="str_key_name.RTSCameraHotKey_Up" text="{=RTSCamera_pausekey}Pause" />

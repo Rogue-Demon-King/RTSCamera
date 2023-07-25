@@ -118,8 +118,6 @@ namespace RTSCamera.Config
 
         public bool OrderUIClickable = true;
 
-        public bool FixCompanionFormation = false;
-
         public static void OnMenuClosed()
         {
             Get().Serialize();
@@ -151,7 +149,6 @@ namespace RTSCamera.Config
             LimitCameraDistance = other.LimitCameraDistance;
             CameraDistanceLimitFactor = other.CameraDistanceLimitFactor;
             OrderUIClickable = other.OrderUIClickable;
-            FixCompanionFormation = other.FixCompanionFormation;
         }
         [XmlIgnore]
         protected override string SaveName => Path.Combine(ConfigPath.ConfigDir, RTSCameraSubModule.ModuleId, nameof(RTSCameraConfig) + ".xml");
