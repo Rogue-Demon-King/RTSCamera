@@ -46,20 +46,6 @@ namespace RTSCameraAgentComponent
             }
         }
 
-        public override void OnStopUsingGameObject()
-        {
-            base.OnStopUsingGameObject();
-
-            // TODO
-            Agent.DisableScriptedMovement();
-            if (Agent.HumanAIComponent != null)
-            {
-                Agent.AIUseGameObjectDisable();
-                Agent.AIMoveToGameObjectDisable();
-            }
-            Agent.SetScriptedFlags(Agent.GetScriptedFlags() & ~Agent.AIScriptedFrameFlags.NoAttack);
-        }
-
         public void SetContourColor(int level, uint? color, bool alwaysVisible, bool updateInstantly)
         {
             if (SetContourColorWithoutUpdate(level, color, alwaysVisible))
@@ -94,8 +80,6 @@ namespace RTSCameraAgentComponent
             _shouldUpdateColor = true;
         }
 
-        [HandleProcessCorruptedStateExceptions]
-        [SecurityCritical]
         public void ClearContourColor()
         {
             try
@@ -132,8 +116,6 @@ namespace RTSCameraAgentComponent
                 UpdateColor();
         }
 
-        [HandleProcessCorruptedStateExceptions]
-        [SecurityCritical]
         public override void OnMount(Agent mount)
         {
             base.OnMount(mount);
@@ -148,8 +130,6 @@ namespace RTSCameraAgentComponent
             }
         }
 
-        [HandleProcessCorruptedStateExceptions]
-        [SecurityCritical]
         public override void OnDismount(Agent mount)
         {
             base.OnDismount(mount);
@@ -187,8 +167,6 @@ namespace RTSCameraAgentComponent
             return -1;
         }
 
-        [HandleProcessCorruptedStateExceptions]
-        [SecurityCritical]
         private void SetColor()
         {
             try
