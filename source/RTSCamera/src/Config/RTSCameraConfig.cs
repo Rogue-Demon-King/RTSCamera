@@ -118,6 +118,10 @@ namespace RTSCamera.Config
 
         public bool OrderUIClickable = true;
 
+        public bool HighlightOwnSelectedFormation = true;
+
+        public bool HighlightEnemyTargetFormation = true;
+
         public static void OnMenuClosed()
         {
             Get().Serialize();

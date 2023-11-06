@@ -294,6 +294,17 @@ namespace RTSCamera.Config
                     () => RTSCameraConfig.Get().OrderUIClickable,
                     b => RTSCameraConfig.Get().OrderUIClickable = UIConfig.DoNotUseGeneratedPrefabs = b));
 
+                miscellaneousOptionCategory.AddOption(new BoolOptionViewModel(
+                    GameTexts.FindText("str_rts_camera_highlight_own_selected_formation"),
+                    GameTexts.FindText("str_rts_camera_highlight_own_selected_formation_hint"),
+                    () => RTSCameraConfig.Get().HighlightOwnSelectedFormation,
+                    b => RTSCameraConfig.Get().HighlightOwnSelectedFormation = b));
+                miscellaneousOptionCategory.AddOption(new BoolOptionViewModel(
+                    GameTexts.FindText("str_rts_camera_highlight_enemy_target_formation"),
+                    GameTexts.FindText("str_rts_camera_highlight_enemy_target_formation_hint"),
+                    () => RTSCameraConfig.Get().HighlightEnemyTargetFormation,
+                    b => RTSCameraConfig.Get().HighlightEnemyTargetFormation = b));
+
                 optionClass.AddOptionCategory(1, miscellaneousOptionCategory);
                 if (NativeConfig.CheatMode)
                 {

@@ -48,8 +48,10 @@ Credits where credit due: the original author and creator of RTSCamera: Izh
 links：
 Nexusmods: https://www.nexusmods.com/mountandblade2bannerlord/mods/355
 mountandblade.com.cn: https://bbs.mountblade.com.cn/thread-2061243-1-1.html"/>
-    <ChangeNotes Value="- Compiled to work with v.1.2.4
-    - Added dependency to UIExtenderEx -> this fixes some random UI stuff, like party aggression changer on Clan window" />
+    <ChangeNotes Value="Migrated the following functionalities from CommandModule:
+    - Formation highlighting -> makes selection of formations viable through mouse movement. You can select a friendly formation that is highlighted, by using the middle mouse button.
+    - Formation charge -> you can select enemy formations the same way (if you already have a friendly selected), essentially giving the 'Charge Formation' command.
+    CommandModule should be entirely deprecated and not needed." />
     <!-- Insert patch notes -->
     <Tags>
       <!-- You can use the following tags: -->

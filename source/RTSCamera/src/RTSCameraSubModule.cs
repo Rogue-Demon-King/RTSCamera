@@ -114,6 +114,7 @@ namespace RTSCamera
                 _successPatch &= Patch_DeploymentMissionController.Patch();
                 _successPatch &= Patch_AgentHumanAILogic.Patch();
                 _successPatch &= Patch_MissionOrderDeploymentControllerVM.Patch();
+                _successPatch &= Patch_OrderTroopPlacer.Patch();
                 // Use Patch to add game menu
                 WatchBattleBehavior.Patch(_harmony);
 
