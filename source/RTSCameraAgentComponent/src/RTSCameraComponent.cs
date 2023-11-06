@@ -80,8 +80,6 @@ namespace RTSCameraAgentComponent
             _shouldUpdateColor = true;
         }
 
-        [HandleProcessCorruptedStateExceptions]
-        [SecurityCritical]
         public void ClearContourColor()
         {
             try
@@ -118,8 +116,6 @@ namespace RTSCameraAgentComponent
                 UpdateColor();
         }
 
-        [HandleProcessCorruptedStateExceptions]
-        [SecurityCritical]
         public override void OnMount(Agent mount)
         {
             base.OnMount(mount);
@@ -134,8 +130,6 @@ namespace RTSCameraAgentComponent
             }
         }
 
-        [HandleProcessCorruptedStateExceptions]
-        [SecurityCritical]
         public override void OnDismount(Agent mount)
         {
             base.OnDismount(mount);
@@ -173,8 +167,6 @@ namespace RTSCameraAgentComponent
             return -1;
         }
 
-        [HandleProcessCorruptedStateExceptions]
-        [SecurityCritical]
         private void SetColor()
         {
             try
@@ -191,9 +183,9 @@ namespace RTSCameraAgentComponent
 
         public override void OnAgentRemoved()
         {
-            base.OnAgentRemoved();
-
             ClearContourColor();
+
+            base.OnAgentRemoved();
         }
     }
 }

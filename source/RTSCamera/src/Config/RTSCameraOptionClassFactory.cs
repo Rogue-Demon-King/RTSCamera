@@ -160,7 +160,7 @@ namespace RTSCamera.Config
                                 if (WatchBattleBehavior.WatchMode)
                                     return;
 
-                                Utility.SetPlayerFormationClass((FormationClass)i);
+                                Utility.SetMainAgentFormationClass((FormationClass)i);
                             }
                         }, () =>
                         {
@@ -213,7 +213,7 @@ namespace RTSCamera.Config
                             rtsCameraLogic.SwitchFreeCameraLogic.CurrentPlayerFormation = (FormationClass)formationClass;
                             if (WatchBattleBehavior.WatchMode)
                                 return;
-                            Utility.SetPlayerFormationClass((FormationClass)formationClass);
+                            Utility.SetMainAgentFormationClass((FormationClass)formationClass);
                             playerFormationOption.UpdateData(false);
                         }
                     }, () => (int)RTSCameraConfig.Get().AutoSetPlayerFormation, (int)AutoSetPlayerFormation.Count,
@@ -293,13 +293,19 @@ namespace RTSCamera.Config
                     GameTexts.FindText("str_rts_camera_order_ui_clickable_hint"),
                     () => RTSCameraConfig.Get().OrderUIClickable,
                     b => RTSCameraConfig.Get().OrderUIClickable = UIConfig.DoNotUseGeneratedPrefabs = b));
-                miscellaneousOptionCategory.AddOption(new BoolOptionViewModel(
-                    GameTexts.FindText("str_rts_camera_fix_companion_formation"),
-                    GameTexts.FindText("str_rts_camera_fix_companion_formation_hint"),
-                    () => RTSCameraConfig.Get().FixCompanionFormation,
-                    b => RTSCameraConfig.Get().FixCompanionFormation = b));
-                optionClass.AddOptionCategory(1, miscellaneousOptionCategory);
 
+                miscellaneousOptionCategory.AddOption(new BoolOptionViewModel(
+                    GameTexts.FindText("str_rts_camera_highlight_own_selected_formation"),
+                    GameTexts.FindText("str_rts_camera_highlight_own_selected_formation_hint"),
+                    () => RTSCameraConfig.Get().HighlightOwnSelectedFormation,
+                    b => RTSCameraConfig.Get().HighlightOwnSelectedFormation = b));
+                miscellaneousOptionCategory.AddOption(new BoolOptionViewModel(
+                    GameTexts.FindText("str_rts_camera_highlight_enemy_target_formation"),
+                    GameTexts.FindText("str_rts_camera_highlight_enemy_target_formation_hint"),
+                    () => RTSCameraConfig.Get().HighlightEnemyTargetFormation,
+                    b => RTSCameraConfig.Get().HighlightEnemyTargetFormation = b));
+
+                optionClass.AddOptionCategory(1, miscellaneousOptionCategory);
                 if (NativeConfig.CheatMode)
                 {
                     var cheatOptionCategory = new OptionCategory("Cheat",

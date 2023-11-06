@@ -17,6 +17,7 @@ namespace RTSCamera.CommandSystem.Patch
             {
                 if (_patched)
                     return;
+
                 _patched = true;
                 //Harmony.Patch(
                 //    typeof(Formation).GetMethod("GetOrderPositionOfUnit", BindingFlags.Instance | BindingFlags.Public),
@@ -32,11 +33,12 @@ namespace RTSCamera.CommandSystem.Patch
                     prefix: new HarmonyMethod(typeof(Patch_MovementOrder).GetMethod("GetSubstituteOrder_Prefix",
                         BindingFlags.Static | BindingFlags.Public), Priority.First));
 
-                Harmony.Patch(
-                    typeof(MovementOrder).GetMethod("SetChargeBehaviorValues",
-                        BindingFlags.Static | BindingFlags.NonPublic),
-                    prefix: new HarmonyMethod(typeof(Patch_MovementOrder).GetMethod("SetChargeBehaviorValues_Prefix",
-                        BindingFlags.Static | BindingFlags.Public), Priority.First));
+                // Removed due to method not found in 1.12.1
+                //Harmony.Patch(
+                //    typeof(MovementOrder).GetMethod("SetChargeBehaviorValues",
+                //        BindingFlags.Static | BindingFlags.NonPublic),
+                //    prefix: new HarmonyMethod(typeof(Patch_MovementOrder).GetMethod("SetChargeBehaviorValues_Prefix",
+                //        BindingFlags.Static | BindingFlags.Public), Priority.First));
 
                 Harmony.Patch(
                     typeof(HumanAIComponent).GetMethod("GetFormationFrame",

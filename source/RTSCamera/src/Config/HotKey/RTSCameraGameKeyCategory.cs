@@ -25,6 +25,7 @@ namespace RTSCamera.Config.HotKey
         CameraMoveDown,
         IncreaseCameraDistanceLimit,
         DecreaseCameraDistanceLimit,
+        SelectFormation,
         NumberOfGameKeyEnums
     }
     public class RTSCameraGameKeyCategory
@@ -122,6 +123,12 @@ namespace RTSCamera.Config.HotKey
                 nameof(GameKeyEnum.DecreaseCameraDistanceLimit), CategoryId, new List<InputKey>
                 {
                     InputKey.RightShift, InputKey.Minus
+                }));
+           result.AddGameKeySequence(new GameKeySequence((int) GameKeyEnum.SelectFormation,
+                nameof(GameKeyEnum.SelectFormation),
+                CategoryId, new List<InputKey>
+                {
+                    InputKey.MiddleMouseButton
                 }));
             return result;
         }

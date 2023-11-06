@@ -118,7 +118,9 @@ namespace RTSCamera.Config
 
         public bool OrderUIClickable = true;
 
-        public bool FixCompanionFormation = true;
+        public bool HighlightOwnSelectedFormation = true;
+
+        public bool HighlightEnemyTargetFormation = true;
 
         public static void OnMenuClosed()
         {
@@ -151,7 +153,6 @@ namespace RTSCamera.Config
             LimitCameraDistance = other.LimitCameraDistance;
             CameraDistanceLimitFactor = other.CameraDistanceLimitFactor;
             OrderUIClickable = other.OrderUIClickable;
-            FixCompanionFormation = other.FixCompanionFormation;
         }
         [XmlIgnore]
         protected override string SaveName => Path.Combine(ConfigPath.ConfigDir, RTSCameraSubModule.ModuleId, nameof(RTSCameraConfig) + ".xml");

@@ -112,9 +112,9 @@ namespace RTSCamera
                 _successPatch &= Patch_MissionGauntletMainAgentEquipDropView.Patch();
                 _successPatch &= Patch_MissionGauntletMainAgentEquipmentControllerView.Patch();
                 _successPatch &= Patch_DeploymentMissionController.Patch();
-                _successPatch &= Patch_SandboxBattleSpawnModel.Patch();
                 _successPatch &= Patch_AgentHumanAILogic.Patch();
                 _successPatch &= Patch_MissionOrderDeploymentControllerVM.Patch();
+                _successPatch &= Patch_OrderTroopPlacer.Patch();
                 // Use Patch to add game menu
                 WatchBattleBehavior.Patch(_harmony);
 
@@ -160,10 +160,13 @@ namespace RTSCamera
                 return false;
 
             RTSCameraGameKeyCategory.RegisterGameKeyCategory();
+
             Global.RegisterProvider(
                 VersionProviderCreator.Create(() => new RTSCameraAgentComponent.MissionStartingHandler(),
                     new Version(1, 0, 0)), "RTSCameraAgentComponent.MissionStartingHandler");
+
             Global.GetProvider<AMissionStartingManager>().AddHandler(new MissionStartingHandler.MissionStartingHandler());
+
             var menuClassCollection = AMenuManager.Get().MenuClassCollection;
             AMenuManager.Get().OnMenuClosedEvent += RTSCameraConfig.OnMenuClosed;
             menuClassCollection.AddOptionClass(RTSCameraOptionClassFactory.CreateOptionClassProvider(menuClassCollection));

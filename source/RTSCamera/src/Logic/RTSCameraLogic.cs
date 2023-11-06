@@ -14,6 +14,8 @@ namespace RTSCamera.Logic
         public SwitchTeamLogic SwitchTeamLogic;
         public ControlTroopLogic ControlTroopLogic;
         public CampaignSkillLogic CampaignSkillLogic;
+        public FormationColorLogic FormationColorLogic;
+
         public static RTSCameraLogic Instance;
 
         public RTSCameraLogic()
@@ -26,6 +28,7 @@ namespace RTSCamera.Logic
             SwitchTeamLogic = new SwitchTeamLogic(this);
             ControlTroopLogic = new ControlTroopLogic(this);
             CampaignSkillLogic = new CampaignSkillLogic(this);
+            FormationColorLogic = new FormationColorLogic(this);
         }
 
         public override void OnCreated()
@@ -45,6 +48,7 @@ namespace RTSCamera.Logic
             SwitchTeamLogic.OnBehaviourInitialize();
             ControlTroopLogic.OnBehaviourInitialize();
             CampaignSkillLogic.OnBehaviourInitialize();
+            FormationColorLogic.OnBehaviourInitialize();
         }
 
         public override void OnRemoveBehavior()
@@ -54,14 +58,15 @@ namespace RTSCamera.Logic
             CommanderLogic.OnRemoveBehaviour();
             FixScoreBoardAfterPlayerDeadLogic.OnRemoveBehaviour();
             SwitchFreeCameraLogic.OnRemoveBehaviour();
-            
+            FormationColorLogic.OnRemoveBehaviour();
+
             Instance = null;
         }
 
         public override void AfterStart()
         {
             base.AfterStart();
-            
+
             MissionSpeedLogic.AfterStart();
         }
 
@@ -71,6 +76,7 @@ namespace RTSCamera.Logic
 
             SwitchFreeCameraLogic.AfterAddTeam(team);
             CampaignSkillLogic.AfterAddTeam(team);
+            FormationColorLogic.AfterAddTeam(team);
         }
 
         public override void OnTeamDeployed(Team team)
@@ -78,6 +84,13 @@ namespace RTSCamera.Logic
             base.OnTeamDeployed(team);
 
             SwitchFreeCameraLogic.OnTeamDeployed(team);
+        }
+
+        public override void OnPreDisplayMissionTick(float dt)
+        {
+            base.OnPreDisplayMissionTick(dt);
+
+            FormationColorLogic.OnPreDisplayMissionTick(dt);
         }
 
         public override void OnMissionTick(float dt)
@@ -111,6 +124,19 @@ namespace RTSCamera.Logic
             base.OnAgentRemoved(affectedAgent, affectorAgent, agentState, blow);
 
             SwitchFreeCameraLogic.OnAgentRemoved(affectedAgent, affectorAgent, agentState, blow);
+        }
+        public override void OnAgentBuild(Agent agent, Banner banner)
+        {
+            base.OnAgentBuild(agent, banner);
+
+            FormationColorLogic.OnAgentBuild(agent, banner);
+        }
+
+        public override void OnAgentFleeing(Agent affectedAgent)
+        {
+            base.OnAgentFleeing(affectedAgent);
+
+            FormationColorLogic.OnAgentFleeing(affectedAgent);
         }
     }
 }

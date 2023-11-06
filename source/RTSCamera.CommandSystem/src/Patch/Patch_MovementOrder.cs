@@ -12,7 +12,7 @@ namespace RTSCamera.CommandSystem.Patch
             Formation formation)
         {
             if (__instance.OrderType == OrderType.ChargeWithTarget && CommandSystemConfig.Get().AttackSpecificFormation &&
-                CommandSystemSubModule.IsRealisticBattleModuleNotInstalled && !formation.IsAIControlled)
+                !CommandSystemSubModule.IsRealisticBattleModuleInstalled && !formation.IsAIControlled)
             {
                 if (CommandSystemConfig.Get().BehaviorAfterCharge == BehaviorAfterCharge.Hold)
                 {
