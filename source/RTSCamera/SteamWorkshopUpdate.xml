@@ -48,7 +48,8 @@ Credits where credit due: the original author and creator of RTSCamera: Izh
 links：
 Nexusmods: https://www.nexusmods.com/mountandblade2bannerlord/mods/355
 mountandblade.com.cn: https://bbs.mountblade.com.cn/thread-2061243-1-1.html"/>
-    <ChangeNotes Value="- Compiled to work with v.1.2.1" />
+    <ChangeNotes Value="- Compiled to work with v.1.2.4
+    - Added dependency to UIExtenderEx -> this fixes some random UI stuff, like party aggression changer on Clan window" />
     <!-- Insert patch notes -->
     <Tags>
       <!-- You can use the following tags: -->
@@ -59,7 +60,8 @@ mountandblade.com.cn: https://bbs.mountblade.com.cn/thread-2061243-1-1.html"/>
       <Tag Value="UI"/>
       <Tag Value="AI"/>
       <Tag Value="Singleplayer"/>
-      <Tag Value="v1.2.1" />
+      <Tag Value="v1.2.4" />
+      <Tag Value="v1.2.x" />
     </Tags>
   </UpdateItem>
 </Tasks>

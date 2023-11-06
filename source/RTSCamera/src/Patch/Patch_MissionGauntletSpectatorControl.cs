@@ -21,6 +21,7 @@ namespace RTSCamera.Patch
             {
                 if (_patched)
                     return false;
+
                 _patched = true;
 
                 Harmony.Patch(
