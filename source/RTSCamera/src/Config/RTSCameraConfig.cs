@@ -122,6 +122,8 @@ namespace RTSCamera.Config
 
         public bool HighlightEnemyTargetFormation = true;
 
+        public bool MoreVisibleMoveLocation = true;
+
         public static void OnMenuClosed()
         {
             Get().Serialize();
@@ -153,7 +155,10 @@ namespace RTSCamera.Config
             LimitCameraDistance = other.LimitCameraDistance;
             CameraDistanceLimitFactor = other.CameraDistanceLimitFactor;
             OrderUIClickable = other.OrderUIClickable;
-        }
+            HighlightOwnSelectedFormation = other.HighlightOwnSelectedFormation;
+            HighlightEnemyTargetFormation = other.HighlightEnemyTargetFormation;
+            MoreVisibleMoveLocation = other.MoreVisibleMoveLocation;
+    }
         [XmlIgnore]
         protected override string SaveName => Path.Combine(ConfigPath.ConfigDir, RTSCameraSubModule.ModuleId, nameof(RTSCameraConfig) + ".xml");
     }
