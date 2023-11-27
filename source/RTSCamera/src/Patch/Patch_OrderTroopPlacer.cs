@@ -171,7 +171,6 @@ namespace RTSCamera.Patch
             return false;
         }
 
-
         private static void HideNonSelectedOrderRotationEntities(OrderController ___PlayerOrderController, List<GameEntity> ____orderRotationEntities, Formation formation)
         {
             for (int index = 0; index < ____orderRotationEntities.Count; ++index)
@@ -184,7 +183,6 @@ namespace RTSCamera.Patch
                 }
             }
         }
-
 
         private static void TryTransformFromClickingToDragging(OrderTroopPlacer __instance, Vec2? ____formationDrawingStartingPointOfMouse, float? ____formationDrawingStartingTime, OrderController ___PlayerOrderController,
             ref Formation ____clickedFormation, ref bool ____formationDrawingMode, bool ____isMouseDown)
